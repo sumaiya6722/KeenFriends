@@ -54,7 +54,7 @@ const FriendsDetails = () => {
 
 
   return (
-    <div className='grid grid-cols-5 grid-rows-7 gap-5 container mx-auto p-20'>
+    <div className='flex flex-col md:grid grid-cols-5 grid-rows-7 gap-5 container mx-auto p-20'>
 
       {/* section-1  */}
       <div className=' bg-white shadow-md rounded-md row-span-4 col-span-2 p-10 text-center'>

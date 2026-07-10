@@ -4,7 +4,7 @@ import { IoLogoDiscord } from 'react-icons/io5';
 
 const Footer = () => {
   return (
-    <div className='bg-[#244D3F] text-white p-20 text-center'>
+    <div className='bg-[#244D3F] text-white p-5 md:p-10 lg:p-20 text-center'>
       <div>
         <h2 className='text-5xl font-bold'>KeenKeeper</h2>
         <p className='opacity-70 my-4'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
@@ -17,7 +17,7 @@ const Footer = () => {
           <div className='p-2 rounded-full bg-white'><IoLogoDiscord /></div>
         </div>
       </div>
-      <div className='flex justify-between pt-7 border-t opacity-70'>
+      <div className='flex flex-col space-y-3 md:flex-row justify-between pt-7 border-t opacity-70'>
         <h3>© 2026 KeenKeeper. All rights reserved.</h3>
         <div>
           <ul className='flex gap-3'>

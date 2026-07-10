@@ -15,7 +15,7 @@ const BannerPage = () => {
         <Button className='bg-[#244D3F] text-white rounded'>+ Add a Friend</Button>
       </div>
 
-      <div className="grid grid-cols-4 gap-5 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
         <div className="flex flex-col items-center py-15 rounded-xl bg-white shadow-md">
           <h3 className="font-semibold text-3xl">10</h3>
           <p className="text-[#64748B]">Total Friends</p>
