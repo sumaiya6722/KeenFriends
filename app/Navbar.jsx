@@ -42,18 +42,7 @@ const Navbar = () => {
 
   return (
     <div>
-      {/* <div className="navbar bg-base-100 shadow-sm">
-        <div className="flex-1">
-          <a className="btn btn-ghost text-2xl font-bold"><span>Keen<span className="text-[#244D3F] font-semibold">Keeper</span></span></a>
-        </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-3 gap-1">
-
-            {links}
-          </ul>
-        </div>
-      </div> */}
-
+      
 
       <div className="navbar bg-base-100 shadow-sm px-4 md:px-8">
         {/* LEFT SECTION: Hamburger for mobile & Site Logo branding */}

@@ -25,7 +25,6 @@ const FriendsProvider = ({ children }) => {
 
   const filteredEntries = activeEntries === 'all'? currentTimelineEntry : currentTimelineEntry.filter((c)=> c.type==activeEntries)
 
-
   const data = { currentTimelineEntry, handleCheckIn, handleFilter, filteredEntries, activeEntries };
 
   return (

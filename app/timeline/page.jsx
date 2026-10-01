@@ -4,8 +4,9 @@
 import { useContext } from "react";
 import { FriendsContext } from "../context/FriendsContext";
 import { TimelineCard } from "../components/TimelineCard";
-// import noFound from '../not-found';
-// import { notFound } from "next/navigation";
+
+
+
 
 const TimeLine = () => {
   const { handleFilter, filteredEntries } = useContext(FriendsContext);

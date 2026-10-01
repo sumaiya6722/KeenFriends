@@ -16,8 +16,6 @@ const FriendsDetails = () => {
 
   const { id } = useParams(); //gets the dynamic id
 
-  // const [checkIn, setCheckIn] = useState('');
-
   const { handleCheckIn } = useContext(FriendsContext);
 
   // Note: We use Number(id) because params are strings, but our JSON ids are numbers
