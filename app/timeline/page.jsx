@@ -17,7 +17,8 @@ const TimeLine = () => {
       <h1 className="text-4xl font-bold mb-5">Timeline</h1>
       <div className="">
         <select defaultValue="Filter timeline" className="select p-2">
-          <option disabled={true}>Filter Timeline</option>
+          {/* <option disabled={true}>Filter Timeline</option> */}
+          <option onClick={() => handleFilter('all')}>All</option>
           <option onClick={() => handleFilter('call')}>Call</option>
           <option onClick={() => handleFilter('text')}>Text</option>
           <option onClick={() => handleFilter('video')}>Video</option>

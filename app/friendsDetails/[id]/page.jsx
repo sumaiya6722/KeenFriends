@@ -23,7 +23,7 @@ const FriendsDetails = () => {
   if (!friendsDetails) {
     notFound();
   }
-  const { picture, name, days_since_contact, status, goal, tags, bio, email, next_due_date } = friendsDetails;
+  const { name, days_since_contact, status, goal, tags, bio, email, next_due_date } = friendsDetails;
 
 
   const statusColors = {
@@ -108,12 +108,12 @@ const FriendsDetails = () => {
         <h3 className='pb-3 text-2xl font-semibold text-[#244D3F]'>Quick Check-In</h3>
         <div className='grid grid-cols-3 gap-3 text-2xl'>
 
-          <div onClick={() => handleCheckIn('call',name,theDate,picture)} className='bg-[#F8FAFC] p-7 cursor-pointer flex flex-col items-center gap-1 rounded-xl font-semibold border border-gray-200'>
+          <div onClick={() => handleCheckIn('call',name,theDate)} className='bg-[#F8FAFC] p-7 cursor-pointer flex flex-col items-center gap-1 rounded-xl font-semibold border border-gray-200'>
             <LuPhoneCall /><h3>Call</h3></div>
 
-          <div onClick={() => handleCheckIn('text',name,theDate,picture)} className='bg-[#F8FAFC] p-7 cursor-pointer flex flex-col items-center gap-1 rounded-xl font-semibold border border-gray-200 '><LuMessageSquareText /><h3>Text</h3></div>
+          <div onClick={() => handleCheckIn('text',name,theDate)} className='bg-[#F8FAFC] p-7 cursor-pointer flex flex-col items-center gap-1 rounded-xl font-semibold border border-gray-200 '><LuMessageSquareText /><h3>Text</h3></div>
 
-          <div onClick={() => handleCheckIn('video',name,theDate,picture)} className='bg-[#F8FAFC] p-7 cursor-pointer flex flex-col items-center gap-1 rounded-xl font-semibold border border-gray-200 '><FiVideo /><h3>Video</h3></div>
+          <div onClick={() => handleCheckIn('video',name,theDate)} className='bg-[#F8FAFC] p-7 cursor-pointer flex flex-col items-center gap-1 rounded-xl font-semibold border border-gray-200 '><FiVideo /><h3>Video</h3></div>
 
 
         </div>

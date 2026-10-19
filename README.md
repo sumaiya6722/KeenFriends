@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# KeenKeeper
 
-## Getting Started
+KeenKeeper is a small friendship-tracking dashboard for keeping meaningful connections in view. Browse a seeded list of friends, review each person’s contact goal and status, and record call, text, or video check-ins. The app shows those check-ins in a timeline and summarizes them in an interaction chart.
 
-First, run the development server:
+## Features
+
+- Browse friend cards with contact status and relationship goals.
+- Open a friend’s profile to see their bio, tags, contact details, and next due date.
+- Record a call, text, or video check-in from a friend profile.
+- View check-ins in a timeline and see a breakdown by interaction type.
+- Navigate between Home, Timeline, and Stats from the responsive navigation bar.
+
+Friend records are currently loaded from `public/data.json`. Check-ins are held in React context in the browser session, so they are not saved to a database and reset when the app state is lost or the page is refreshed. The home page’s summary figures are currently static sample values.
+
+## Getting started
+
+### Requirements
+
+- Node.js (a current LTS release is recommended)
+- npm
+
+### Install and run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/homepage](http://localhost:3000/homepage) to use the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Next.js development server using webpack. |
+| `npm run build` | Create a production build. |
+| `npm run start` | Run the production build locally. |
+| `npm run lint` | Run ESLint. |
 
-## Learn More
+## App routes
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Description |
+| --- | --- |
+| `/homepage` | Dashboard banner and seeded friend list. |
+| `/friendsDetails/[id]` | Profile and quick check-in actions for a friend. |
+| `/timeline` | Check-in history with interaction type filtering. |
+| `/stats` | Donut chart of check-ins by type. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+app/
+  components/       Reusable friend and timeline cards
+  context/          Shared check-in state
+  friendsDetails/   Dynamic friend profile route
+  homepage/         Dashboard and friend list
+  stats/            Interaction analytics
+  timeline/         Check-in history
+  layout.tsx        Shared app shell, navigation, and provider
+public/
+  data.json         Seed friend records
+```
 
-## Deploy on Vercel
+## Tech stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 with the App Router
+- React 19
+- Tailwind CSS 4 and DaisyUI
+- HeroUI components
+- Recharts for the analytics chart
+- React Toastify for check-in feedback
